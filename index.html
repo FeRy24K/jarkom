@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="containera-info" id="pemesanan">
+    <div class="containera-info">
+          <h4>Server Akan Dimatikan Dalam</h4>
+    <h1 id="demo"></h1>
+    <script>
+      var countDownDate = new Date("Jan 20, 2023 23:59:00").getTime();
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "Waduhhhh";
+          setTimeout("location.href='error.html'", 1000);
+        }
+      }, 1000);
+    </script>
       <h1>Konfigurasi UAS Jarkom 2</h1>
       <h4>Nilai Auto 100% no root support kitkat 4K 1080 FPS Rata Tanah gratis ongkir ke seluruh pulau jawa &#128561; &#128561; &#128561;</h4>
       <hr />
