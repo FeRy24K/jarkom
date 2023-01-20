@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAS Jarkom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="containera-info" id="pemesanan">
+      <h1>Konfigurasi UAS Jarkom 2</h1>
+      <h4>Nilai Auto 100% no root support kitkat 4K 1080 FPS Rata Tanah gratis ongkir ke seluruh pulau jawa &#128561; &#128561; &#128561;</h4>
+      <hr />
+      <center>
+        <h1>Soal :</h1>
+        <h4>Gambar Topologi Jaringan</h4>
+        <img src="img/topologi.png" align="center" width="1000px" />
+        <h4>Table</h4>
+        <img src="img/table.png" align="center" />
+        <h4>Skenario</h4>
+        <img src="img/skenario.png" align="center" />
+        <h3>
+          Jika anda adalah orang yang pemalas tapi punya uang bisa Joki ke saya <br />
+          Anda hanya perlu membayar 25 Ribu nilai jarkom anda sudah 100% tanpa pusing mikir dan ngetik :v
+        </h3>
+        <hr />
+        <h1>Jawaban konfigurasi :</h1>
+        <h4>
+          Untuk pengerjaan hanya perlu melakukan copy paste code sesuai dengan nama yang tertera kedalam perangkat yang di soal Cisco Packet Tracer. <br />
+          Untuk skenario pengerjaannya bisa melihat video dibawah ini agar bisa 100% :
+        </h4>
+        <iframe
+          width="1100"
+          height="620"
+          src="https://www.youtube.com/embed/Fe-Y26JyB_E"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <h3>Konfigurasi Switch 1 :</h3>
+      </center>
+      <div class="containera-code">
+        <p>
+          en <br />
+          conf t <br />
+          vtp domain Laboratorium<br />
+          vtp mode client<br />
+          vtp password labpass<br />
+          int fa0/4<br />
+          switchport mode trunk<br />
+          int fa0/1<br />
+          switchport mode access<br />
+          switchport access vlan 10<br />
+          int fa0/2<br />
+          switchport mode access<br />
+          switchport access vlan 20<br />
+          int fa0/3<br />
+          switchport mode access<br />
+          switchport access vlan 30<br />
+          end<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Switch 2 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          vtp domain Laboratorium<br />
+          vtp mode client<br />
+          vtp password labpass<br />
+          int fa0/4<br />
+          switchport mode trunk<br />
+          int fa0/1<br />
+          switchport mode access<br />
+          switchport access vlan 10<br />
+          int fa0/2<br />
+          switchport mode access<br />
+          switchport access vlan 20<br />
+          int fa0/3<br />
+          switchport mode access<br />
+          switchport access vlan 30<br />
+          end<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Switch 3 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          vlan 10<br />
+          name VLAN10<br />
+          vlan 20<br />
+          name VLAN20<br />
+          vlan 30<br />
+          name VLAN30<br />
+          vtp mode server<br />
+          vtp domain Laboratorium<br />
+          vtp password labpass<br />
+          int fa0/1<br />
+          switchport mode trunk<br />
+          ex<br />
+          int fa0/2<br />
+          switchport mode trunk<br />
+          int g0/1<br />
+          switchport mode trunk<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Switch 4 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          vtp domain Perpustakaan<br />
+          vtp mode client<br />
+          vtp password perpuspass<br />
+          int fa0/4<br />
+          switchport mode trunk<br />
+          int fa0/1<br />
+          switchport mode access<br />
+          switchport access vlan 40<br />
+          int fa0/2<br />
+          switchport mode access<br />
+          switchport access vlan 50<br />
+          int fa0/3<br />
+          switchport mode access<br />
+          switchport access vlan 60<br />
+          end<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Switch 5 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          vtp domain Perpustakaan<br />
+          vtp mode client<br />
+          vtp password perpuspass<br />
+          int fa0/4<br />
+          switchport mode trunk<br />
+          int fa0/1<br />
+          switchport mode access<br />
+          switchport access vlan 40<br />
+          int fa0/2<br />
+          switchport mode access<br />
+          switchport access vlan 50<br />
+          int fa0/3<br />
+          switchport mode access<br />
+          switchport access vlan 60<br />
+          end<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Switch 6 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          vlan 40<br />
+          name VLAN40<br />
+          vlan 50<br />
+          name VLAN50<br />
+          vlan 60<br />
+          name VLAN60<br />
+          vtp mode server<br />
+          vtp domain Perpustakaan<br />
+          vtp password perpuspass<br />
+          int fa0/1<br />
+          switchport mode trunk<br />
+          int fa0/2<br />
+          switchport mode trunk<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Router 1 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          int g0/0<br />
+          ip add 131.0.0.1 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int g0/1<br />
+          ip add 121.0.0.1 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int loopback1<br />
+          ip add 1.1.1.1 255.255.255.255<br />
+          no sh<br />
+          ex<br />
+          router ospf 1<br />
+          network 131.0.0.0 0.0.0.3 area 2<br />
+          network 121.0.0.0 0.0.0.3 area 0<br />
+          network 1.1.1.1 0.0.0.0 area 0<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Router 2 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          int g0/0<br />
+          ip add 152.0.0.1 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int g0/1<br />
+          ip add 121.0.0.2 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int loopback2<br />
+          ip add 2.2.2.2 255.255.255.255<br />
+          no sh<br />
+          ex<br />
+          router ospf 1<br />
+          network 152.0.0.0 0.0.0.3 area 1<br />
+          network 121.0.0.0 0.0.0.3 area 0<br />
+          network 2.2.2.2 0.0.0.0 area 0<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Router 3 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          int g0/0<br />
+          ip add 131.0.0.2 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int g0/1<br />
+          ip add 143.0.0.1 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int loopback3<br />
+          ip add 3.3.3.3 255.255.255.255<br />
+          no sh<br />
+          ex<br />
+          router eigrp 100<br />
+          no auto-summary<br />
+          network 143.0.0.0<br />
+          network 131.0.0.0<br />
+          redistribute ospf 1 metric 1 1 1 1 1<br />
+          ex<br />
+          router ospf 1<br />
+          network 131.0.0.0 0.0.0.3 area 2<br />
+          network 143.0.0.0 0.0.0.3 area 2<br />
+          network 3.3.3.3 0.0.0.0 area 2<br />
+          redistribute eigrp 100 subnets<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Router 4 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          int g0/1<br />
+          ip add 143.0.0.2 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int g0/2<br />
+          no sh<br />
+          ex<br />
+          int g0/2.40<br />
+          encapsulation dot1Q 40<br />
+          ip add 172.17.40.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int g0/2.50<br />
+          encapsulation dot1Q 50<br />
+          ip add 172.17.50.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int g0/2.60<br />
+          encapsulation dot1Q 60<br />
+          ip add 172.17.60.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int loopback4<br />
+          ip add 4.4.4.4 255.255.255.255<br />
+          no sh<br />
+          ex<br />
+          router eigrp 100<br />
+          no auto-summary<br />
+          network 143.0.0.0<br />
+          network 172.17.40.0<br />
+          network 172.17.50.0<br />
+          network 172.17.60.0<br />
+          network 4.4.4.4<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <h3>Konfigurasi Router 5 :</h3>
+      <div class="containera-code">
+        <p>
+          en<br />
+          conf t<br />
+          int g0/0<br />
+          ip add 152.0.0.2 255.255.255.252<br />
+          no sh<br />
+          ex<br />
+          int g0/1<br />
+          no sh<br />
+          ex<br />
+          int g0/1.10<br />
+          encapsulation dot1Q 10<br />
+          ip add 172.17.10.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int g0/1.20<br />
+          encapsulation dot1Q 20<br />
+          ip add 172.17.20.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int g0/1.30<br />
+          encapsulation dot1Q 30<br />
+          ip add 172.17.30.1 255.255.255.0<br />
+          no sh<br />
+          ex<br />
+          int loopback5<br />
+          ip add 5.5.5.5 255.255.255.255<br />
+          no sh<br />
+          ex<br />
+          router ospf 1<br />
+          network 152.0.0.0 0.0.0.3 area 1<br />
+          network 172.17.10.0 0.0.0.3 area 1<br />
+          network 172.17.20.0 0.0.0.3 area 1<br />
+          network 172.17.30.0 0.0.0.3 area 1<br />
+          network 5.5.5.5 0.0.0.0 area 1<br />
+          end<br />
+          wr<br />
+        </p>
+      </div>
+      <br />
+      <br />
+      <div class="containera-donate">
+        <h4>Support me :</h4>
+        <h4>Scan me</h4>
+        <center>
+          <img src="img/donate.png" width="200px" />
+        </center>
+        <h4>
+          Via QRIS Dana, Gopay, Shopeepay, Ovo, LinkAja, Mobile Banking <br />
+          Berapapun jumlahnya sangat berarti bagi saya untuk config semester depan :v
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>
