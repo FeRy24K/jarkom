@@ -37,3 +37,18 @@ h4 {
 p {
   color: white;
 }
+.responsive {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+.responsive1 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+.responsive2 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
