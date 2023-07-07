@@ -3,7 +3,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: rgb(167, 164, 164);
+  background-color: #8B5FBF;
 }
 h1,
 h3,
@@ -21,7 +21,7 @@ h4 {
   max-width: 35em;
   padding: 1em 3em 2em 3em;
   margin: 0em auto;
-  background-color: rgb(36, 34, 34);
+  background-color: #D6C6E1;
   border-radius: 10px;
 }
 .containera-donate {
